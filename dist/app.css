@@ -1,3 +1,24 @@
 @tailwind base;
+
+  .divider::after{
+    background: #E3E3E3;
+  }
+
+  @font-face {
+    font-family: moraba;
+    src: url('/src/assets/fonts/MorabbaVF.woff2') format('woff2');
+  }
+  
+  @font-face {
+    font-family: yekanbakh;
+    src: url('/src/assets/fonts/YekanBakhFaNum-VF.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: yekanbakhfa;
+    src: url('/src/assets/fonts/YekanBakhFaNum-VF.woff2') format('woff2');
+  }
+
+
 @tailwind components;
 @tailwind utilities;

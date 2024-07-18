@@ -10,7 +10,13 @@ module.exports = {
         "2xl": "7rem",
       },
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        moraba:['moraba'],
+        yekanbakh:['yekanbakh'],
+        yekanbakhfa:['yekanbakhfa'],
+      },
+    },
   },
   plugins: [],
 };
