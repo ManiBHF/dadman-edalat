@@ -561,19 +561,19 @@ video {
 @font-face {
   font-family: moraba;
 
-  src: url('/src/assets/fonts/MorabbaVF.woff2') format('woff2');
+  src: url('../fonts/MorabbaVF.woff2') format('woff2');
 }
 
 @font-face {
   font-family: yekanbakh;
 
-  src: url('/src/assets/fonts/YekanBakhFaNum-VF.woff2') format('woff2');
+  src: url('../fonts/YekanBakhFaNum-VF.woff2') format('woff2');
 }
 
 @font-face {
   font-family: yekanbakhfa;
 
-  src: url('/src/assets/fonts/YekanBakhFaNum-VF.woff2') format('woff2');
+  src: url('../fonts/YekanBakhFaNum-VF.woff2') format('woff2');
 }
 
 .container {
@@ -1728,12 +1728,12 @@ video {
     width: 64px;
   }
 
-  .md\:gap-\[9px\] {
-    gap: 9px;
-  }
-
   .md\:gap-5 {
     gap: 1.25rem;
+  }
+
+  .md\:gap-\[9px\] {
+    gap: 9px;
   }
 
   .md\:p-1 {
@@ -1888,6 +1888,10 @@ video {
     row-gap: 2.5rem;
   }
 
+  .lg\:p-0 {
+    padding: 0px;
+  }
+
   .lg\:p-3 {
     padding: 0.75rem;
   }
@@ -1896,12 +1900,12 @@ video {
     padding: 2rem;
   }
 
-  .lg\:p-0 {
-    padding: 0px;
-  }
-
   .lg\:pb-0 {
     padding-bottom: 0px;
+  }
+
+  .lg\:pl-0 {
+    padding-left: 0px;
   }
 
   .lg\:pl-32 {
@@ -1914,10 +1918,6 @@ video {
 
   .lg\:pt-1 {
     padding-top: 0.25rem;
-  }
-
-  .lg\:pl-0 {
-    padding-left: 0px;
   }
 
   .lg\:text-\[10px\] {
