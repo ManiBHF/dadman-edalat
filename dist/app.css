@@ -4,6 +4,21 @@
     background: #E3E3E3;
   }
 
+.box:hover{
+background-color: #AA9169;
+transition: 0.4s;
+}
+.box:hover .sh-white{
+  color: white;
+}
+.box:hover path{
+  fill: white;
+}
+
+.box:hover .icon{
+  background-color: rgba(0, 0, 0, 0.281);
+}
+
   @font-face {
     font-family: moraba;
     src: url('../fonts/MorabbaVF.woff2') format('woff2');
