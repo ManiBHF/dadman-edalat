@@ -2392,6 +2392,10 @@ video {
     height: 561px;
   }
 
+  .lg\:h-\[595px\] {
+    height: 595px;
+  }
+
   .lg\:w-\[110px\] {
     width: 110px;
   }
