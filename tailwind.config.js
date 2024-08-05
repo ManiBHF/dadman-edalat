@@ -16,6 +16,10 @@ module.exports = {
         yekanbakh:['yekanbakh'],
         yekanbakhfa:['yekanbakhfa'],
       },
+      backgroundImage: {
+        'hero-pattern': "url('../images/Untitled (1).png')",
+
+      }
     },
   },
   plugins: [],
