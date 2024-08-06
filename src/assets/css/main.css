@@ -831,6 +831,10 @@ video {
   left: 1rem;
 }
 
+.left-5 {
+  left: 1.25rem;
+}
+
 .right-6 {
   right: 1.5rem;
 }
@@ -845,18 +849,6 @@ video {
 
 .top-8 {
   top: 2rem;
-}
-
-.right-4 {
-  right: 1rem;
-}
-
-.right-7 {
-  right: 1.75rem;
-}
-
-.left-5 {
-  left: 1.25rem;
 }
 
 .z-0 {
@@ -1194,6 +1186,14 @@ video {
 
 .gap-\[72px\] {
   gap: 72px;
+}
+
+.gap-\[45px\] {
+  gap: 45px;
+}
+
+.gap-\[42px\] {
+  gap: 42px;
 }
 
 .gap-y-2 {
