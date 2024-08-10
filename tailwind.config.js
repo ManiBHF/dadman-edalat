@@ -17,7 +17,7 @@ module.exports = {
         yekanbakhfa:['yekanbakhfa'],
       },
       backgroundImage: {
-        'hero-pattern': "url('../images/Untitled (1).png')",
+        'hero-pattern': "url('../images/view-3d-justice-scales_23-2151228146 1.jpg')",
 
       }
     },
