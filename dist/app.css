@@ -93,6 +93,9 @@
   @apply absolute bottom-0 lg:bottom-auto lg:top-4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 xl:left-[18rem] z-20;
 }
 
+
+
+
 .navigation-slider {
   position: relative;
   width: 170px;
@@ -100,6 +103,16 @@
   height: 29px !important;
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-color: #cdcdcd2f;
+  border-radius: 20px;
+}
+
+.navigation-slider2 {
+  position: relative;
+  width: 170px;
+  min-width: 114px;
+  height: 29px !important;
   align-items: center;
   background-color: #cdcdcd2f;
   border-radius: 20px;
@@ -156,4 +169,21 @@
   );
 }
 
+.box-book:hover{
+  background-color: #AA9169;
+  transition: 0.4s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.box-book:hover .book-text h3, .box-book:hover .book-text p{
+color: white
+}
+
+.box-book:hover .book-svg path{
+  fill: white;
+}
+
+.box-book:hover .book-bt{
+  background-color: #8b6f40;
+}
 @tailwind utilities;

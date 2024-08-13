@@ -18,6 +18,7 @@ module.exports = {
       },
       backgroundImage: {
         'hero-pattern': "url('../images/view-3d-justice-scales_23-2151228146 1.jpg')",
+        'news': "url('../images/Group 1000004547.jpg')",
 
       }
     },
