@@ -59,6 +59,10 @@
   .swiper-slide {
     width: 281px !important;
   }
+  .swiper-book .swiper-wrapper .swiper-slide {
+    width: 100% !important;
+    height: 100% !important;
+  }
 }
 
 .swiper-navigation-pagination-container {
@@ -186,4 +190,28 @@ color: white
 .box-book:hover .book-bt{
   background-color: #8b6f40;
 }
+.swiper-book {
+  width: 384px;
+  height: 443px;
+  border-radius: 25px;
+  border: 1px solid #f2f2f2;
+}
+
+.swiper-book .swiper-slide {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-book .swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 24px !important;
+  color: #fff;
+}
+
+
 @tailwind utilities;
