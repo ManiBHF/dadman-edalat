@@ -208,7 +208,7 @@ color: white
   align-items: center;
 }
 .swiper-book .swiper-button-next::after,
-.swiper-button-prev::after {
+.swiper-book .swiper-button-prev::after {
   font-size: 24px !important;
   color: #fff;
 }
