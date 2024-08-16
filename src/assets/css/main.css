@@ -1213,6 +1213,14 @@ video {
   height: 100%;
 }
 
+.h-\[185px\] {
+  height: 185px;
+}
+
+.h-\[171px\] {
+  height: 171px;
+}
+
 .w-11 {
   width: 2.75rem;
 }
