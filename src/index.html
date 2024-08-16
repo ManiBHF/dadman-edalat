@@ -310,7 +310,59 @@
         </div>
       </a>
     </div> -->
+    <div  x-data="{
+      open: false,
+      toggle() {
+          if (this.open) {
+              return this.close()
+          }
 
+          this.$refs.button.focus()
+
+          this.open = true
+      },
+      close(focusAfter) {
+          if (! this.open) return
+
+          this.open = false
+
+          focusAfter &amp;&amp; focusAfter.focus()
+      }
+  }" x-on:keydown.escape.prevent.stop="close($refs.button)" x-on:focusin.window="! $refs.panel.contains($event.target) &amp;&amp; close()" x-id="['dropdown-button']" class="relative ml-7 max-md:pb-[10px] max-md:ml-10">
+  <!-- Button -->
+  <button x-ref="button" x-on:click="toggle()" :aria-expanded="open" :aria-controls="$id('dropdown-button')" type="button" class="bg-transparent" aria-label="language" aria-expanded="false" aria-controls="dropdown-button-1">
+      <div class="flex items-center gap-2 text-white hover:text-green-500 transition">
+          <span aria-hidden="true" class="header-language-arrow">
+              <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.472344 0.195625C0.212344 0.455625 0.212344 0.875625 0.472344 1.13563L3.53234 4.19562C3.79234 4.45562 4.21234 4.45562 4.47234 4.19562L7.53234 1.13562C7.79234 0.875625 7.79234 0.455625 7.53234 0.195625C7.27234 -0.0643752 6.85234 -0.0643752 6.59234 0.195625L3.99901 2.78229L1.41234 0.195625C1.15234 -0.064375 0.725677 -0.0577083 0.472344 0.195625Z" class="fill-current" ></path>
+              </svg>
+          </span>
+
+          <span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.9987 14.6693C11.6806 14.6693 14.6654 11.6845 14.6654 8.0026C14.6654 4.32071 11.6806 1.33594 7.9987 1.33594C4.3168 1.33594 1.33203 4.32071 1.33203 8.0026C1.33203 11.6845 4.3168 14.6693 7.9987 14.6693Z" class="stroke-current" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" ></path>
+                  <path d="M1.33203 8H14.6654" class="stroke-current" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" ></path>
+                  <path d="M7.9987 1.33594C9.66622 3.16151 10.6139 5.53063 10.6654 8.0026C10.6139 10.4746 9.66622 12.8437 7.9987 14.6693C6.33118 12.8437 5.38353 10.4746 5.33203 8.0026C5.38353 5.53063 6.33118 3.16151 7.9987 1.33594V1.33594Z" class="stroke-current" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" ></path>
+              </svg>
+          </span>
+      </div>
+  </button>
+
+  <!-- Panel -->
+  <div x-ref="panel" x-show="open" x-transition.origin.top.left="" x-on:click.outside="close($refs.button)" :id="$id('dropdown-button')" class="absolute rtl:left-0 ltr:right-0 mt-2 w-32 bg-white rounded shadow-md overflow-hidden p-2 z-50" id="dropdown-button-1" style="display: none;">
+      <div>
+          <a href="/en" class="block w-full px-4 py-2 text-center text-sm text-gray-600 font-medium hover:bg-gray-50 hover:text-gray-900 disabled:text-gray-500 rounded-lg transition">
+                              English
+                          </a><a href="/ar" class="block w-full px-4 py-2 text-center text-sm text-gray-600 font-medium hover:bg-gray-50 hover:text-gray-900 disabled:text-gray-500 rounded-lg transition">
+                              العربية
+                          </a><a href="/tr" class="block w-full px-4 py-2 text-center text-sm text-gray-600 font-medium hover:bg-gray-50 hover:text-gray-900 disabled:text-gray-500 rounded-lg transition">
+                              Türkçe
+                          </a><a href="/pt" class="block w-full px-4 py-2 text-center text-sm text-gray-600 font-medium hover:bg-gray-50 hover:text-gray-900 disabled:text-gray-500 rounded-lg transition">
+
+Portuguese
+                          </a>        </div>
+  </div>
+</div>
           <div class="flex flex-col ml-7 max-md:hidden">
             <div class="flex items-center">
               <svg
