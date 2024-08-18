@@ -11,7 +11,7 @@
   <body>
     <!-- CALL -->
     <div
-      class="flex z-[100] items-center fixed right-0 bottom-10 max-md:hidden"
+      class="flex z-[100] items-center fixed right-[15px] bottom-10  opacity-70"
     >
       <div class="bg-[#AA9169] p-5 rounded-full ml-2">
         <svg
@@ -3440,7 +3440,7 @@
     </div>
     <!-- NEWS -->
     <div
-      class="bg-news relative bg-center bg-clip-border bg-no-repeat bg-cover md:h-[730px] max-md:h-[1720px] overflow-hidden bg-opacity-[5%] max-md:mt-12 font-yekanbakh max-md:px-6"
+      class="bg-news relative bg-center bg-clip-border bg-no-repeat bg-cover md:h-[780px] max-md:h-[1800px] overflow-hidden bg-opacity-[5%] max-md:mt-12 font-yekanbakh max-md:px-6"
     >
       <div class="flex flex-col items-center justify-center pt-24">
         <h3 class="text-[26px] font-extralight text-[#2D2D2D]">
@@ -4351,6 +4351,15 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="md:mt-8 flex md:container">
+
+        <a
+          href="#"
+          class="text-white bg-[#2D2D2D]  max-md:w-full px-4 py-1 max-md:py-2 rounded-full text-sm max-md:text-center max-md:mt-9"
+        >
+          <strong>مشاهده </strong>بیشتر...
+        </a>
       </div>
       <div class="absolute top-0 right-0 max-md:top-[7px] w-full -mb-1">
         <div class="flex justify-center mt-[0px] max-md:-mb-2"></div>
@@ -5373,6 +5382,10 @@
     <script>
       var swiper = new Swiper(".bookSwiper", {
         slidesPerView: 1,
+        autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
