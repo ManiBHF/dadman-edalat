@@ -9,6 +9,35 @@
   </head>
 
   <body>
+    <!-- CALL -->
+    <div
+      class="flex z-[100] items-center fixed right-0 bottom-10 max-md:hidden"
+    >
+      <div class="bg-[#AA9169] p-5 rounded-full ml-2">
+        <svg
+          width="26"
+          height="26"
+          viewBox="0 0 26 26"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6.03434 24.5918C3.49934 24.5918 1.35434 22.4468 1.35434 19.9118V13.2384C1.30017 10.0751 2.47017 7.09595 4.65851 4.86428C6.84684 2.64345 9.78267 1.40845 12.946 1.40845C19.4027 1.40845 24.646 6.66261 24.646 13.1084V19.7818C24.646 22.3601 22.5443 24.4618 19.966 24.4618C17.431 24.4618 15.286 22.3168 15.286 19.7818V16.7376C15.286 15.1668 16.521 13.9318 18.0918 13.9318C19.6627 13.9318 20.8977 15.1668 20.8977 16.7376V20.0201C20.8977 20.4643 20.5293 20.8326 20.0852 20.8326C19.641 20.8326 19.2727 20.4643 19.2727 20.0201V16.7376C19.2727 16.0009 18.6768 15.5568 18.0918 15.5568C17.3552 15.5568 16.911 16.1526 16.911 16.7376V19.7818C16.911 21.4393 18.3085 22.8368 19.966 22.8368C21.6235 22.8368 23.021 21.4393 23.021 19.7818V13.1084C23.021 7.55095 18.5035 3.03345 12.946 3.03345C10.2268 3.03345 7.70267 4.08428 5.81767 6.00178C3.93267 7.91928 2.92517 10.4868 2.97934 13.2168V19.9118C2.97934 21.5693 4.37684 22.9668 6.03434 22.9668C7.69184 22.9668 9.08934 21.5693 9.08934 19.9118V16.8676C9.08934 16.1309 8.49351 15.6868 7.90851 15.6868C7.17184 15.6868 6.72767 16.2826 6.72767 16.8676V20.0309C6.72767 20.4751 6.35934 20.8434 5.91517 20.8434C5.47101 20.8434 5.10267 20.4751 5.10267 20.0309V16.8676C5.10267 15.2968 6.33767 14.0618 7.90851 14.0618C9.47934 14.0618 10.7143 15.2968 10.7143 16.8676V19.9118C10.7143 22.4468 8.56934 24.5918 6.03434 24.5918Z"
+            fill="white"
+          />
+        </svg>
+      </div>
+      <div class="flex flex-col gap-2">
+        <p
+          class="text-white bg-[#464646] px-3 py-2 rounded-t-[25px] rounded-br-[25px] font-thin"
+        >
+          <strong>مشاوره سریع: </strong>22332233<strong>-021</strong>
+        </p>
+        <p class="text-[14px] font-light text-[#464646] pr-3">
+          مشتاقــــ شنیدنــــ صدایـــ شما هستیمـــ ...
+        </p>
+      </div>
+    </div>
     <!-- HEADER -->
     <header class="bg-[#AA9169]/50 h-[110px] flex fixed top-0 w-full z-50">
       <!-- DESKTOP -->
@@ -310,7 +339,8 @@
         </div>
       </a>
     </div> -->
-    <div  x-data="{
+          <div
+            x-data="{
       open: false,
       toggle() {
           if (this.open) {
@@ -328,41 +358,112 @@
 
           focusAfter &amp;&amp; focusAfter.focus()
       }
-  }" x-on:keydown.escape.prevent.stop="close($refs.button)" x-on:focusin.window="! $refs.panel.contains($event.target) &amp;&amp; close()" x-id="['dropdown-button']" class="relative ml-7 max-md:pb-[10px] max-md:ml-10">
-  <!-- Button -->
-  <button x-ref="button" x-on:click="toggle()" :aria-expanded="open" :aria-controls="$id('dropdown-button')" type="button" class="bg-transparent" aria-label="language" aria-expanded="false" aria-controls="dropdown-button-1">
-      <div class="flex items-center gap-2 text-white hover:text-green-500 transition">
-          <span aria-hidden="true" class="header-language-arrow">
-              <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0.472344 0.195625C0.212344 0.455625 0.212344 0.875625 0.472344 1.13563L3.53234 4.19562C3.79234 4.45562 4.21234 4.45562 4.47234 4.19562L7.53234 1.13562C7.79234 0.875625 7.79234 0.455625 7.53234 0.195625C7.27234 -0.0643752 6.85234 -0.0643752 6.59234 0.195625L3.99901 2.78229L1.41234 0.195625C1.15234 -0.064375 0.725677 -0.0577083 0.472344 0.195625Z" class="fill-current" ></path>
-              </svg>
-          </span>
+  }"
+            x-on:keydown.escape.prevent.stop="close($refs.button)"
+            x-on:focusin.window="! $refs.panel.contains($event.target) &amp;&amp; close()"
+            x-id="['dropdown-button']"
+            class="relative ml-7 max-md:pb-[10px] max-md:ml-10"
+          >
+            <!-- Button -->
+            <button
+              x-ref="button"
+              x-on:click="toggle()"
+              :aria-expanded="open"
+              :aria-controls="$id('dropdown-button')"
+              type="button"
+              class="bg-transparent"
+              aria-label="language"
+              aria-expanded="false"
+              aria-controls="dropdown-button-1"
+            >
+              <div
+                class="flex items-center gap-2 text-white hover:text-green-500 transition"
+              >
+                <span aria-hidden="true" class="header-language-arrow">
+                  <svg
+                    width="8"
+                    height="5"
+                    viewBox="0 0 8 5"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.472344 0.195625C0.212344 0.455625 0.212344 0.875625 0.472344 1.13563L3.53234 4.19562C3.79234 4.45562 4.21234 4.45562 4.47234 4.19562L7.53234 1.13562C7.79234 0.875625 7.79234 0.455625 7.53234 0.195625C7.27234 -0.0643752 6.85234 -0.0643752 6.59234 0.195625L3.99901 2.78229L1.41234 0.195625C1.15234 -0.064375 0.725677 -0.0577083 0.472344 0.195625Z"
+                      class="fill-current"
+                    ></path>
+                  </svg>
+                </span>
 
-          <span>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7.9987 14.6693C11.6806 14.6693 14.6654 11.6845 14.6654 8.0026C14.6654 4.32071 11.6806 1.33594 7.9987 1.33594C4.3168 1.33594 1.33203 4.32071 1.33203 8.0026C1.33203 11.6845 4.3168 14.6693 7.9987 14.6693Z" class="stroke-current" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" ></path>
-                  <path d="M1.33203 8H14.6654" class="stroke-current" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" ></path>
-                  <path d="M7.9987 1.33594C9.66622 3.16151 10.6139 5.53063 10.6654 8.0026C10.6139 10.4746 9.66622 12.8437 7.9987 14.6693C6.33118 12.8437 5.38353 10.4746 5.33203 8.0026C5.38353 5.53063 6.33118 3.16151 7.9987 1.33594V1.33594Z" class="stroke-current" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" ></path>
-              </svg>
-          </span>
-      </div>
-  </button>
+                <span>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.9987 14.6693C11.6806 14.6693 14.6654 11.6845 14.6654 8.0026C14.6654 4.32071 11.6806 1.33594 7.9987 1.33594C4.3168 1.33594 1.33203 4.32071 1.33203 8.0026C1.33203 11.6845 4.3168 14.6693 7.9987 14.6693Z"
+                      class="stroke-current"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M1.33203 8H14.6654"
+                      class="stroke-current"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M7.9987 1.33594C9.66622 3.16151 10.6139 5.53063 10.6654 8.0026C10.6139 10.4746 9.66622 12.8437 7.9987 14.6693C6.33118 12.8437 5.38353 10.4746 5.33203 8.0026C5.38353 5.53063 6.33118 3.16151 7.9987 1.33594V1.33594Z"
+                      class="stroke-current"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </span>
+              </div>
+            </button>
 
-  <!-- Panel -->
-  <div x-ref="panel" x-show="open" x-transition.origin.top.left="" x-on:click.outside="close($refs.button)" :id="$id('dropdown-button')" class="absolute rtl:left-0 ltr:right-0 mt-2 w-32 bg-white rounded shadow-md overflow-hidden p-2 z-50" id="dropdown-button-1" style="display: none;">
-      <div>
-          <a href="/en" class="block w-full px-4 py-2 text-center text-sm text-gray-600 font-medium hover:bg-gray-50 hover:text-gray-900 disabled:text-gray-500 rounded-lg transition">
-                              English
-                          </a><a href="/ar" class="block w-full px-4 py-2 text-center text-sm text-gray-600 font-medium hover:bg-gray-50 hover:text-gray-900 disabled:text-gray-500 rounded-lg transition">
-                              العربية
-                          </a><a href="/tr" class="block w-full px-4 py-2 text-center text-sm text-gray-600 font-medium hover:bg-gray-50 hover:text-gray-900 disabled:text-gray-500 rounded-lg transition">
-                              Türkçe
-                          </a><a href="/pt" class="block w-full px-4 py-2 text-center text-sm text-gray-600 font-medium hover:bg-gray-50 hover:text-gray-900 disabled:text-gray-500 rounded-lg transition">
-
-Portuguese
-                          </a>        </div>
-  </div>
-</div>
+            <!-- Panel -->
+            <div
+              x-ref="panel"
+              x-show="open"
+              x-transition.origin.top.left=""
+              x-on:click.outside="close($refs.button)"
+              :id="$id('dropdown-button')"
+              class="absolute rtl:left-0 ltr:right-0 mt-2 w-32 bg-white rounded shadow-md overflow-hidden p-2 z-50"
+              id="dropdown-button-1"
+              style="display: none"
+            >
+              <div>
+                <a
+                  href="/en"
+                  class="block w-full px-4 py-2 text-center text-sm text-gray-600 font-medium hover:bg-gray-50 hover:text-gray-900 disabled:text-gray-500 rounded-lg transition"
+                >
+                  English </a
+                ><a
+                  href="/ar"
+                  class="block w-full px-4 py-2 text-center text-sm text-gray-600 font-medium hover:bg-gray-50 hover:text-gray-900 disabled:text-gray-500 rounded-lg transition"
+                >
+                  العربية </a
+                ><a
+                  href="/tr"
+                  class="block w-full px-4 py-2 text-center text-sm text-gray-600 font-medium hover:bg-gray-50 hover:text-gray-900 disabled:text-gray-500 rounded-lg transition"
+                >
+                  Türkçe </a
+                ><a
+                  href="/pt"
+                  class="block w-full px-4 py-2 text-center text-sm text-gray-600 font-medium hover:bg-gray-50 hover:text-gray-900 disabled:text-gray-500 rounded-lg transition"
+                >
+                  Portuguese
+                </a>
+              </div>
+            </div>
+          </div>
           <div class="flex flex-col ml-7 max-md:hidden">
             <div class="flex items-center">
               <svg
@@ -755,34 +856,6 @@ Portuguese
     </div>
     <!-- KHADAMAT -->
     <div class="font-yekanbakhfa mt-24 container">
-      <div
-        class="flex z-[100] items-center absolute max-md:hidden right-[10px]"
-      >
-        <div class="bg-[#AA9169] p-5 rounded-full ml-2">
-          <svg
-            width="26"
-            height="26"
-            viewBox="0 0 26 26"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M6.03434 24.5918C3.49934 24.5918 1.35434 22.4468 1.35434 19.9118V13.2384C1.30017 10.0751 2.47017 7.09595 4.65851 4.86428C6.84684 2.64345 9.78267 1.40845 12.946 1.40845C19.4027 1.40845 24.646 6.66261 24.646 13.1084V19.7818C24.646 22.3601 22.5443 24.4618 19.966 24.4618C17.431 24.4618 15.286 22.3168 15.286 19.7818V16.7376C15.286 15.1668 16.521 13.9318 18.0918 13.9318C19.6627 13.9318 20.8977 15.1668 20.8977 16.7376V20.0201C20.8977 20.4643 20.5293 20.8326 20.0852 20.8326C19.641 20.8326 19.2727 20.4643 19.2727 20.0201V16.7376C19.2727 16.0009 18.6768 15.5568 18.0918 15.5568C17.3552 15.5568 16.911 16.1526 16.911 16.7376V19.7818C16.911 21.4393 18.3085 22.8368 19.966 22.8368C21.6235 22.8368 23.021 21.4393 23.021 19.7818V13.1084C23.021 7.55095 18.5035 3.03345 12.946 3.03345C10.2268 3.03345 7.70267 4.08428 5.81767 6.00178C3.93267 7.91928 2.92517 10.4868 2.97934 13.2168V19.9118C2.97934 21.5693 4.37684 22.9668 6.03434 22.9668C7.69184 22.9668 9.08934 21.5693 9.08934 19.9118V16.8676C9.08934 16.1309 8.49351 15.6868 7.90851 15.6868C7.17184 15.6868 6.72767 16.2826 6.72767 16.8676V20.0309C6.72767 20.4751 6.35934 20.8434 5.91517 20.8434C5.47101 20.8434 5.10267 20.4751 5.10267 20.0309V16.8676C5.10267 15.2968 6.33767 14.0618 7.90851 14.0618C9.47934 14.0618 10.7143 15.2968 10.7143 16.8676V19.9118C10.7143 22.4468 8.56934 24.5918 6.03434 24.5918Z"
-              fill="white"
-            />
-          </svg>
-        </div>
-        <div class="flex flex-col gap-2">
-          <p
-            class="text-white bg-[#464646] px-3 py-2 rounded-t-[25px] rounded-br-[25px] font-thin"
-          >
-            <strong>مشاوره سریع: </strong>22332233<strong>-021</strong>
-          </p>
-          <p class="text-[14px] font-light text-[#464646] pr-3">
-            مشتاقــــ شنیدنــــ صدایـــ شما هستیمـــ ...
-          </p>
-        </div>
-      </div>
       <div class="flex flex-col items-center justify-center">
         <h3 class="text-[26px] font-light text-[#2D2D2D]">
           خدمات <strong class="font-black">موسسه</strong>
@@ -3391,32 +3464,7 @@ Portuguese
           <rect width="24" height="3" rx="1.5" fill="#F0F0F0" />
         </svg>
       </div>
-      <div class="flex z-[100] items-center absolute top-[110px] max-md:hidden">
-        <div class="bg-[#AA9169] p-5 rounded-full ml-2">
-          <svg
-            width="26"
-            height="26"
-            viewBox="0 0 26 26"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M6.03434 24.5918C3.49934 24.5918 1.35434 22.4468 1.35434 19.9118V13.2384C1.30017 10.0751 2.47017 7.09595 4.65851 4.86428C6.84684 2.64345 9.78267 1.40845 12.946 1.40845C19.4027 1.40845 24.646 6.66261 24.646 13.1084V19.7818C24.646 22.3601 22.5443 24.4618 19.966 24.4618C17.431 24.4618 15.286 22.3168 15.286 19.7818V16.7376C15.286 15.1668 16.521 13.9318 18.0918 13.9318C19.6627 13.9318 20.8977 15.1668 20.8977 16.7376V20.0201C20.8977 20.4643 20.5293 20.8326 20.0852 20.8326C19.641 20.8326 19.2727 20.4643 19.2727 20.0201V16.7376C19.2727 16.0009 18.6768 15.5568 18.0918 15.5568C17.3552 15.5568 16.911 16.1526 16.911 16.7376V19.7818C16.911 21.4393 18.3085 22.8368 19.966 22.8368C21.6235 22.8368 23.021 21.4393 23.021 19.7818V13.1084C23.021 7.55095 18.5035 3.03345 12.946 3.03345C10.2268 3.03345 7.70267 4.08428 5.81767 6.00178C3.93267 7.91928 2.92517 10.4868 2.97934 13.2168V19.9118C2.97934 21.5693 4.37684 22.9668 6.03434 22.9668C7.69184 22.9668 9.08934 21.5693 9.08934 19.9118V16.8676C9.08934 16.1309 8.49351 15.6868 7.90851 15.6868C7.17184 15.6868 6.72767 16.2826 6.72767 16.8676V20.0309C6.72767 20.4751 6.35934 20.8434 5.91517 20.8434C5.47101 20.8434 5.10267 20.4751 5.10267 20.0309V16.8676C5.10267 15.2968 6.33767 14.0618 7.90851 14.0618C9.47934 14.0618 10.7143 15.2968 10.7143 16.8676V19.9118C10.7143 22.4468 8.56934 24.5918 6.03434 24.5918Z"
-              fill="white"
-            />
-          </svg>
-        </div>
-        <div class="flex flex-col gap-2">
-          <p
-            class="text-white bg-[#464646] px-3 py-2 rounded-t-[25px] rounded-br-[25px] font-thin"
-          >
-            <strong>مشاوره سریع: </strong>22332233<strong>-021</strong>
-          </p>
-          <p class="text-[14px] font-light text-[#464646] pr-3">
-            مشتاقــــ شنیدنــــ صدایـــ شما هستیمـــ ...
-          </p>
-        </div>
-      </div>
+
       <div
         class="md:container flex w-full mt-12 gap-x-5 max-md:flex-col max-md:items-center"
       >
@@ -4329,11 +4377,19 @@ Portuguese
       </div>
     </div>
     <!-- UPPER FOOTER -->
-     <div class="bg-[#AA9169] w-full h-[300px] mt-20 relative flex -z-10 max-md:h-[430px]">
-      <img src="./assets/images/still-life-with-scales-justice_23-2149776024 1.png" alt="" class="absolute z-10 max-md:hidden">
-      <div class="container flex items-center mt-16 md:mr-[45px] max-md:flex-col ">
+    <div
+      class="bg-[#AA9169] w-full h-[300px] mt-20 relative flex -z-10 max-md:h-[430px]"
+    >
+      <img
+        src="./assets/images/still-life-with-scales-justice_23-2149776024 1.png"
+        alt=""
+        class="absolute z-10 max-md:hidden"
+      />
+      <div
+        class="container flex items-center mt-16 md:mr-[45px] max-md:flex-col"
+      >
         <div class="flex md:w-[15%] max-md:mb-4">
-          <div class=" max-md:ml-1">
+          <div class="max-md:ml-1">
             <svg
               width="24"
               height="30"
@@ -4379,25 +4435,42 @@ Portuguese
             <p
               class="font-extrabold italic lg:text-[16px] md:text-[8px] text-white max-md:text-[14px] font-moraba"
             >
-            چرا دادمان عدالت برتر؟            </p>
+              چرا دادمان عدالت برتر؟
+            </p>
             <p
               class="text-[#BCBCBC] font-normal lg:text-[10px] text-end lg:pt-1 md:text-[13px] max-md:text-[8px] font-moraba"
             >
-            ارائه خدمات وکالت، مشاوره حقوقی            </p>
+              ارائه خدمات وکالت، مشاوره حقوقی
+            </p>
           </div>
         </div>
         <div class="md:w-[85%]">
-          <p class="text-[14px] font-light leading-8 text-white max-md:text-center">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در  و سه درصد گذشته، حال و آینده شناخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی </p>
+          <p
+            class="text-[14px] font-light leading-8 text-white max-md:text-center"
+          >
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+            استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+            کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی
+            در و سه درصد گذشته، حال و آینده شناخت تایپ به پایان رسد وزمان مورد
+            نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی
+          </p>
         </div>
       </div>
       <div class="absolute top-0 right-0 max-md:top-[7px] w-full -mb-1">
-        <div class="flex justify-center mt-[0px] max-md:-mb-2">
-        
-        </div>
+        <div class="flex justify-center mt-[0px] max-md:-mb-2"></div>
         <div>
-          <svg class="w-full h-full" viewBox="0 0 1440 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg
+            class="w-full h-full"
+            viewBox="0 0 1440 74"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <g clip-path="url(#clip0_123_2324)">
-              <path d="M1440 0H0V74H338.328C687.48 71.6813 722.94 2.38033 722.94 2.38033C722.94 2.38033 758.4 71.6813 1107.6 74H1440V0Z" fill="white"></path>
+              <path
+                d="M1440 0H0V74H338.328C687.48 71.6813 722.94 2.38033 722.94 2.38033C722.94 2.38033 758.4 71.6813 1107.6 74H1440V0Z"
+                fill="white"
+              ></path>
             </g>
             <defs>
               <clipPath id="clip0_123_2324">
@@ -4405,24 +4478,38 @@ Portuguese
               </clipPath>
             </defs>
           </svg>
-          <div class="flex w-full justify-center item-center md:-mt-[40px] md:pl-[9px] max-md:pl-[5px]">
-            <svg width="22" height="39"           class="animate-bounce"
-            viewBox="0 0 22 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3.90189 14.1663C4.07223 14.1663 4.24258 14.1036 4.37706 13.9691L10.2226 8.12355C10.6529 7.69321 11.3522 7.69321 11.7826 8.12355L17.6281 13.9691C17.8881 14.2291 18.3184 14.2291 18.5784 13.9691C18.8384 13.7091 18.8384 13.2787 18.5784 13.0187L12.7329 7.17321C11.7826 6.22286 10.2315 6.22286 9.27223 7.17321L3.42671 13.0187C3.16671 13.2787 3.16671 13.7091 3.42671 13.9691C3.5612 14.0946 3.73154 14.1663 3.90189 14.1663Z" fill="white"/>
+          <div
+            class="flex w-full justify-center item-center md:-mt-[40px] md:pl-[9px] max-md:pl-[5px]"
+          >
+            <svg
+              width="22"
+              height="39"
+              class="animate-bounce"
+              viewBox="0 0 22 39"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.90189 14.1663C4.07223 14.1663 4.24258 14.1036 4.37706 13.9691L10.2226 8.12355C10.6529 7.69321 11.3522 7.69321 11.7826 8.12355L17.6281 13.9691C17.8881 14.2291 18.3184 14.2291 18.5784 13.9691C18.8384 13.7091 18.8384 13.2787 18.5784 13.0187L12.7329 7.17321C11.7826 6.22286 10.2315 6.22286 9.27223 7.17321L3.42671 13.0187C3.16671 13.2787 3.16671 13.7091 3.42671 13.9691C3.5612 14.0946 3.73154 14.1663 3.90189 14.1663Z"
+                fill="white"
+              />
               <g opacity="0.6">
-              <path d="M3.90189 22.2352C4.07223 22.2352 4.24258 22.1724 4.37706 22.0379L10.2226 16.1924C10.6529 15.7621 11.3522 15.7621 11.7826 16.1924L17.6281 22.0379C17.8881 22.2979 18.3184 22.2979 18.5784 22.0379C18.8384 21.7779 18.8384 21.3476 18.5784 21.0876L12.7329 15.2421C11.7826 14.2917 10.2315 14.2917 9.27223 15.2421L3.42671 21.0876C3.16671 21.3476 3.16671 21.7779 3.42671 22.0379C3.5612 22.1634 3.73154 22.2352 3.90189 22.2352Z" fill="white"/>
+                <path
+                  d="M3.90189 22.2352C4.07223 22.2352 4.24258 22.1724 4.37706 22.0379L10.2226 16.1924C10.6529 15.7621 11.3522 15.7621 11.7826 16.1924L17.6281 22.0379C17.8881 22.2979 18.3184 22.2979 18.5784 22.0379C18.8384 21.7779 18.8384 21.3476 18.5784 21.0876L12.7329 15.2421C11.7826 14.2917 10.2315 14.2917 9.27223 15.2421L3.42671 21.0876C3.16671 21.3476 3.16671 21.7779 3.42671 22.0379C3.5612 22.1634 3.73154 22.2352 3.90189 22.2352Z"
+                  fill="white"
+                />
               </g>
               <g opacity="0.2">
-              <path d="M3.90189 31.6492C4.07223 31.6492 4.24258 31.5865 4.37706 31.452L10.2226 25.6065C10.6529 25.1761 11.3522 25.1761 11.7826 25.6065L17.6281 31.452C17.8881 31.712 18.3184 31.712 18.5784 31.452C18.8384 31.192 18.8384 30.7616 18.5784 30.5016L12.7329 24.6561C11.7826 23.7058 10.2315 23.7058 9.27223 24.6561L3.42671 30.5016C3.16671 30.7616 3.16671 31.192 3.42671 31.452C3.5612 31.5775 3.73154 31.6492 3.90189 31.6492Z" fill="white"/>
+                <path
+                  d="M3.90189 31.6492C4.07223 31.6492 4.24258 31.5865 4.37706 31.452L10.2226 25.6065C10.6529 25.1761 11.3522 25.1761 11.7826 25.6065L17.6281 31.452C17.8881 31.712 18.3184 31.712 18.5784 31.452C18.8384 31.192 18.8384 30.7616 18.5784 30.5016L12.7329 24.6561C11.7826 23.7058 10.2315 23.7058 9.27223 24.6561L3.42671 30.5016C3.16671 30.7616 3.16671 31.192 3.42671 31.452C3.5612 31.5775 3.73154 31.6492 3.90189 31.6492Z"
+                  fill="white"
+                />
               </g>
-              </svg>
-              
-         
-      </div>
+            </svg>
+          </div>
         </div>
-        
       </div>
-     </div>
+    </div>
     <!-- FOOTER -->
     <footer
       class="bg-[#f4f3f3] w-full lg:h-[561px] rounded-t-[50px] lg:-mt-[38px] max-md:-mt-[50px] max-md:pt-[50px] max-md:h-[1090px] md:h-[657px]"
