@@ -38,10 +38,10 @@
       </div>
     </div>
     <!-- HEADER -->
-    <header class="bg-[#AA9169] h-[110px] flex fixed top-0 w-full">
+    <header class="bg-[#AA9169] h-[110px] flex fixed top-0 w-full z-[100]">
     
       <!-- DESKTOP -->
-      <section class="container flex justify-between items-center">
+      <section class="container flex justify-between items-center ">
         <div class="flex">
           <div class="m-auto max-md:ml-1">
             <svg
@@ -384,7 +384,7 @@
                     <!-- Panel -->
                     <div x-ref="panel" x-show="open" x-transition.origin.top.left="" x-on:click.outside="close($refs.button)" :id="$id('dropdown-button')" class="absolute rtl:left-0 ltr:right-0 mt-2 w-32 bg-white rounded shadow-md overflow-hidden p-2 z-50" id="dropdown-button-1" style="display: none;">
                         <div>
-                            <a href="/en" class="block w-full px-4 py-2 text-center text-sm text-gray-600 font-medium hover:bg-gray-50 hover:text-gray-900 disabled:text-gray-500 rounded-lg transition">
+                            <a href="./in-blog-en.html" class="block w-full px-4 py-2 text-center text-sm text-gray-600 font-medium hover:bg-gray-50 hover:text-gray-900 disabled:text-gray-500 rounded-lg transition">
                                                 English
                                             </a><a href="/ar" class="block w-full px-4 py-2 text-center text-sm text-gray-600 font-medium hover:bg-gray-50 hover:text-gray-900 disabled:text-gray-500 rounded-lg transition">
                                                 العربية
@@ -797,8 +797,8 @@
                 <input type="checkbox"  name="" id="">
                 <label for="">ذخیره نام، ایمیل و وبسایت من در مرورگر برای زمانی که دوباره دیدگاهی می‌نویسم.</label>
             </div>
-            <div class="max-md:mx-auto max-md:mt-4">
-              <input type="submit" name="" id="" value="فرستادن دیدگاه" class="bg-[#AA9169] px-3 py-3 rounded-md text-white outline-none ">
+            <div class="max-md:mx-auto max-md:mt-4 ">
+              <input type="submit" name="" id="" value="فرستادن دیدگاه" class="bg-[#AA9169] cursor-pointer px-3 py-3 rounded-md text-white outline-none ">
             </div>
          </form>
       </div>
