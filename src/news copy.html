@@ -435,6 +435,7 @@
             </div>
           </div>
         </template>
+        
       </div>
 
       <div class="flex justify-center mt-6" x-show="loading">
@@ -442,6 +443,59 @@
         <span class="visually-hidden">در حال بارگذاری...</span>
       </div>
     </div>
+
+
+    <!-- <div x-data="blog()" x-init="init()" class="p-4">
+      <div x-ref="postsContainer">
+          <template x-for="post in visiblePosts" :key="post.id">
+              <div class="flex mb-6">
+                  <div class="w-[243px] max-md:w-[50%] h-[120px] rounded-[14px] overflow-hidden">
+                      <a :href="`/posts/${post.id}`">
+                          <img :src="post.image" alt="" class="w-full h-full object-cover" />
+                      </a>
+                  </div>
+                  <div class="flex flex-col gap-y-6 mr-4 max-md:justify-center max-md:w-[50%]">
+                      <a :href="`/posts/${post.id}`">
+                          <h3 class="text-sm font-black text-[#2D2D2D] max-md:text-right" x-text="post.title"></h3>
+                      </a>
+                      <p class="text-[10px] font-normal text-[#747474] leading-6 max-md:hidden" x-text="post.content"></p>
+                      <ul class="flex justify-between">
+                          <li class="flex items-center lg:ml-9 max-md:ml-3 max-md:flex-col gap-1 max-md:items-start">
+                              <div class="flex items-center">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="13px" height="13px" viewBox="0 0 24 24" class="lg:ml-1 max-md:ml-1">
+                                      <path d="..." fill="#747474"></path>
+                                  </svg>
+                                  <span class="text-[13px] md:pl-2 lg:pl-0 text-[#747474] font-extralight md:ml-6" x-text="post.date"></span>
+                              </div>
+                              <div class="flex items-center">
+                                  <svg width="15" height="15" viewBox="0 0 22 22" class="ml-1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="..." fill="#747474"></path>
+                                  </svg>
+                                  <span class="text-[13px] md:pl-2 lg:pl-0 text-[#747474] font-extralight" x-text="post.author"></span>
+                              </div>
+                          </li>
+                          <li class="flex items-center">
+                              <a class="flex items-center font-semibold text-[13px] text-[#AA9169]" :href="`/posts/${post.id}`">
+                                  <span>اطلاعات بیشتر</span>
+                                  <span class="p-2 rounded-full bg-[#AA9169] mr-2">
+                                      <svg width="11" height="11" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="..." fill="white" />
+                                      </svg>
+                                  </span>
+                              </a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </template>
+  
+          <!-- Loader -->
+          <div x-show="loading" class="flex justify-center items-center mt-4">
+              <div class="loader"></div>
+              <span class="ml-2">Load more</span>
+          </div>
+      </div>
+  </div> -->
     <!-- FOOTER -->
     <footer class="bg-[#f4f3f3] w-full lg:h-[561px] rounded-t-[50px] mt-[100px] max-md:pt-[50px] max-md:h-[1090px] md:h-[657px]" dir="rtl">
       <div class="container grid grid-cols-4 pt-14 max-md:hidden font-yekanbakhfa">
